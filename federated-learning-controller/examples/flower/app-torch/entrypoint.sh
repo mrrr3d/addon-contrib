@@ -5,16 +5,16 @@
 # pip install -e .
 
 # Set writable HOME and ensure /app/.venv has proper permissions
-export HOME=/app
-export PIP_NO_CACHE_DIR=1
-export VENV_PATH=/app/.venv
+# export HOME=/app
+# export PIP_NO_CACHE_DIR=1
+# export VENV_PATH=/app/.venv
 
 # Ensure /app/.venv is writable by the current user
-mkdir -p $VENV_PATH
-chmod -R 777 $VENV_PATH
+# mkdir -p $VENV_PATH
+# chmod -R 777 $VENV_PATH
 
 # Install dependencies globally but within /app/.venv
-pip install --no-cache-dir --prefix=$VENV_PATH -e .
+# pip install --no-cache-dir --prefix=$VENV_PATH -e .
 
 # Update PYTHONPATH to include the new virtual environment
 export PYTHONPATH=$VENV_PATH/lib/python3.11/site-packages:/app:$PYTHONPATH
